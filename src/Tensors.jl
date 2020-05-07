@@ -25,7 +25,7 @@ export tovoigt, tovoigt!, fromvoigt, tomandel, tomandel!, frommandel
 #########
 # Types #
 #########
-abstract type AbstractTensor{order, dim, T <: Real} <: AbstractArray{T, order} end
+abstract type AbstractTensor{order, dim, T <: Number} <: AbstractArray{T, order} end
 
 """
     SymmetricTensor{order,dim,T<:Real}
