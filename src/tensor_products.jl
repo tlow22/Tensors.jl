@@ -187,6 +187,8 @@ julia> otimesu(A, B)
     return Tensor{4, dim}((i,j,k,l) -> S1[i,k] * S2[j,l])
 end
 
+const ⊠ = otimesu
+
 """
     otimesl(::SecondOrderTensor, ::SecondOrderTensor)
 
@@ -220,6 +222,8 @@ julia> otimesl(A, B)
 @inline function otimesl(S1::SecondOrderTensor{dim}, S2::SecondOrderTensor{dim}) where {dim}
     return Tensor{4, dim}((i,j,k,l) -> S1[i,l] * S2[j,k])
 end
+
+const ⊞ = otimesl
 
 """
     dot(::Vec, ::Vec)
