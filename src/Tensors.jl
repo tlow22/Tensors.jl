@@ -15,13 +15,14 @@ export mean
 export AbstractTensor, SymmetricTensor, Tensor, Vec, FourthOrderTensor, SecondOrderTensor
 
 export otimes, ⊗, ⊡, dcontract, dev, vol, symmetric, skew, minorsymmetric, majorsymmetric
-export otimesu, otimesl
+export otimesu, otimesl, ⊠, ⊞
 export minortranspose, majortranspose, isminorsymmetric, ismajorsymmetric
 export tdot, dott, dotdot
 export hessian, gradient, curl, divergence, laplace
 export basevec, eᵢ
 export rotate
 export tovoigt, tovoigt!, fromvoigt, tomandel, tomandel!, frommandel
+export 𝐈, 𝕀, ℤ, ℤ_full, 𝕀ᵗ, 𝕀ˢʸᵐ
 #########
 # Types #
 #########
@@ -169,5 +170,6 @@ include("eigen.jl")
 include("special_ops.jl")
 include("simd.jl")
 include("voigt.jl")
+include("thad_utilities.jl")
 
 end # module
