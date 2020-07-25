@@ -3,8 +3,6 @@ const ℤ32 = zero(SymmetricTensor{4,3,Float32,36})
 const ℤ64 = zero(SymmetricTensor{4,3,Float64,36})
 const ℤ32_full = zero(Tensor{4,3,Float32,81})
 const ℤ64_full = zero(Tensor{4,3,Float64,81})
-const 𝕀32 = one(Tensor{4,3,Float32,81})
-const 𝕀64 = one(Tensor{4,3,Float64,81})
 const 𝐈32 = one(SymmetricTensor{2,3,Float32})
 const 𝐈64 = one(SymmetricTensor{2,3,Float64})
 const 𝕀ᵗ32 = otimesl(𝐈32, 𝐈32)
@@ -27,15 +25,6 @@ Returns the fourth order zero tensor with precision `T` that is stored as a
 """
 @inline ℤ_full(::Type{Float32}) = ℤ32_full
 @inline ℤ_full(::Type{Float64}) = ℤ64_full
-
-"""
-    𝕀(T)
-
-Returns the fourth order identity tensor with precision `T` that is stored as a
-`SymmetricTensor`. Defined such that Iᵢⱼₖₗ = δᵢₖδⱼₗ
-"""
-@inline 𝕀(::Type{Float32}) = 𝕀32
-@inline 𝕀(::Type{Float64}) = 𝕀64
 
 """
     𝕀ᵗ(T)
