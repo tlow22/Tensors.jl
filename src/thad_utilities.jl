@@ -9,8 +9,6 @@ const 𝐈32 = one(SymmetricTensor{2,3,Float32})
 const 𝐈64 = one(SymmetricTensor{2,3,Float64})
 const 𝕀ᵗ32 = otimesl(𝐈32, 𝐈32)
 const 𝕀ᵗ64 = otimesl(𝐈64, 𝐈64)
-const 𝕀ˢʸᵐ32 = one(SymmetricTensor{4,3,Float32,36})
-const 𝕀ˢʸᵐ64 = one(SymmetricTensor{4,3,Float64,36})
 
 """
     ℤ(T)
@@ -47,12 +45,3 @@ that is stored as a `SymmetricTensor`. Defined such that Iᵢⱼₖₗ = δᵢ�
 """
 @inline 𝕀ᵗ(::Type{Float32}) = 𝕀ᵗ32
 @inline 𝕀ᵗ(::Type{Float64}) = 𝕀ᵗ64
-
-"""
-    𝕀ˢʸᵐ(T)
-
-Returns the major symmetric fourth order identity tensor with precision `T`
-that is stored as a `SymmetricTensor`. Defined such that 𝕀ˢʸᵐ = 0.5*(𝕀 + 𝕀ᵗ)
-"""
-@inline 𝕀ˢʸᵐ(::Type{Float32}) = 𝕀ˢʸᵐ32
-@inline 𝕀ˢʸᵐ(::Type{Float64}) = 𝕀ˢʸᵐ64
