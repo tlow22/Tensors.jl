@@ -3,23 +3,12 @@ const ℤ32 = zero(SymmetricTensor{4,3,Float32,36})
 const ℤ64 = zero(SymmetricTensor{4,3,Float64,36})
 const ℤ32_full = zero(Tensor{4,3,Float32,81})
 const ℤ64_full = zero(Tensor{4,3,Float64,81})
-const 𝐈32 = one(SymmetricTensor{2,3,Float32,6})
-const 𝐈64 = one(SymmetricTensor{2,3,Float64,6})
 const 𝕀32 = one(Tensor{4,3,Float32,81})
 const 𝕀64 = one(Tensor{4,3,Float64,81})
 const 𝕀ᵗ32 = otimesl(𝐈32, 𝐈32)
 const 𝕀ᵗ64 = otimesl(𝐈64, 𝐈64)
 const 𝕀ˢʸᵐ32 = one(SymmetricTensor{4,3,Float32,36})
 const 𝕀ˢʸᵐ64 = one(SymmetricTensor{4,3,Float64,36})
-
-## Tensor constant getter functions
-"""
-    𝐈(T)
-
-Returns the second order identity tensor with precision `T`
-"""
-@inline 𝐈(::Type{Float32}) = 𝐈32
-@inline 𝐈(::Type{Float64}) = 𝐈64
 
 """
     ℤ(T)

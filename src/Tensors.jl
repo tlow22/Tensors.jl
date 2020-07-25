@@ -22,7 +22,7 @@ export hessian, gradient, curl, divergence, laplace
 export basevec, eᵢ
 export rotate
 export tovoigt, tovoigt!, fromvoigt, tomandel, tomandel!, frommandel
-export 𝐈, 𝕀, ℤ, ℤ_full, 𝕀ᵗ, 𝕀ˢʸᵐ
+export 𝕀, ℤ, ℤ_full, 𝕀ᵗ, 𝕀ˢʸᵐ
 #########
 # Types #
 #########
